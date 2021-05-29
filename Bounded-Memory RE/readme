@@ -1,1 +1,1 @@
-will upload architecture
+The inputs Automata (defined in the intended format), input word and the buffer size should be provided to the Bounded-Memory enforcer in GeneratePassword.py.
