@@ -4,3 +4,9 @@ The bounded-memory enforcer is implemented in Python. The functionality is divid
 The enforcer method in the module Enforcer is invoked with an automaton, defining the property, described in the intended format using the  DFA module, a positive integer specifying the buffer size, a sequence of events.
 The performance of the Python implementation of bounded-memory enforcer is evaluated using some example properties based on real applications. Its performance is also compared against the ideal (unbounded) enforcer. One of the example property is provided in GeneratePassword.py located in Examples folder.
 The overall architecture will be added in some time. 
+
+
+HOW TO RUN-
+	goto Bounded_Memory_RE/Examples
+	open terminal in Examples
+	run python "give path of GeneratePassword.py file"
