@@ -166,7 +166,7 @@ for i in input_sizes_taken:
 	iAvgTime = []
 	clean_time = []
 	for j in range(100): # 100 iterations
-		Enforcer.enforcer(copy.copy(phi1_4), s1+s2, 4)  #phi1_4 is for no of states  # 4 is buffer size
+		Enforcer.enforcer(copy.copy(phi1_4), s1+s2, 10)  #phi1_4 is for no of states  # 10 is buffer size
 		eAvgTime.append(Enforcer.eend-Enforcer.estart)
 		clean_time.append(Enforcer.sum)
 		##########################
