@@ -5,7 +5,8 @@ import collections
 import itertools 
 from itertools import islice
 import time
-       
+
+#### Function to pre-compute emptiness check for each state in the given automaton ###############
 def computeEmptinessDict(autC):
     dictEnf = {}
     for state in autC.Q:
@@ -15,7 +16,8 @@ def computeEmptinessDict(autC):
         else:
             dictEnf[state] = False
     return dictEnf
-       
+
+#### Function to compute substring of sigmaC by removing smallest cycle in sigmaC ###############
 def computes_substring(iterable, n,automata,k):
 	cleanedBuffer=[]
 	automata.reset(k)
@@ -34,7 +36,8 @@ def computes_substring(iterable, n,automata,k):
 		p1=p3
 		automata.makeInit(p3)
 		automata.reset(p1)
-	
+
+#### Function returning cleaned sigmaC #########################################################
 def clean(sigmaC,phiautomata,maxBuffer,k,event):
 	yn=None
 	for i in range(len(sigmaC)) :
@@ -50,7 +53,8 @@ def clean(sigmaC,phiautomata,maxBuffer,k,event):
 		yn = list(itertools.chain(*yn))
 		yn.append(event)
 		return yn    
-			
+
+#### Bounded Memory Enforcer function to compute the output sequence sigmaS incrementally #######
 def enforcer(phi, sigma,maxBuffer): 
 	if maxBuffer < len(phi.Q):
 			print('your buffer is not of reasonable size')
@@ -107,9 +111,9 @@ def enforcer(phi, sigma,maxBuffer):
 					sigmaC.append(event)              		
 	eend = time.time()					
 
-########################################################################
-########################################################################         
 
+	 
+#### Ideal Enforcer function to compute the output sequence sigmaS incrementally ##########
 def idealenforcer(phi, sigma):
     global istart
     global iend
