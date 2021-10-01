@@ -17,3 +17,8 @@ HOW TO RUN-
 	* goto Bounded_Memory_RE/Examples
 	* open terminal in Examples
 	* run python "give path of GeneratePassword.py file"
+
+Markup : * Bullet list
+              * Nested bullet
+                  * Sub-nested bullet etc
+          * Bullet list item 2
