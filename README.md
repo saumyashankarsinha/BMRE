@@ -13,8 +13,9 @@ The performance of the Python implementation of bounded-memory enforcer is evalu
 The overall architecture will be added in some time. 
 
 
-HOW TO RUN-
-	* goto Bounded_Memory_RE/Examples
-	* open terminal in Examples
-	* run: python "give path of GeneratePassword.py file"
+HOW TO RUN
+
+goto Bounded_Memory_RE/Examples
+open terminal in Examples
+run: python "give path of GeneratePassword.py file"
 
