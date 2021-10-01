@@ -96,7 +96,7 @@ for i in input_sizes_taken:
 		eAvgTime.append(Enforcer.eend-Enforcer.estart)
 		clean_time.append(Enforcer.sum)
 		##########################
-		Enforcer.idealenforcer(copy.copy(p1_9), s1+s2)
+		Enforcer.idealenforcer(copy.copy(p1_3), s1+s2)
 		iAvgTime.append(Enforcer.iend-Enforcer.istart)
 	esum=0
 	isum=0
