@@ -1,1 +1,3 @@
-The input automaton (defined in the intended format), input word and the buffer size should be provided to the Bounded-Memory enforcer. For example, in order to run the enforcer for GeneratePassword.py, phi1_10, s1+s2 and 10 are given as input automaton, input word and buffer size respectively in Enforcer.enforcer(copy.copy(phi1_10), s1+s2, 10).
+The input automaton (defined in the intended format), input word and the buffer size should be provided to the Bounded-Memory enforcer. For example, in order to run the enforcer for GeneratePassword.py, phi1_10, s1+s2 and 10 are given as input automaton, input word and buffer size respectively to the enforcer in the following way-
+
+Enforcer.enforcer(copy.copy(phi1_10), s1+s2, 10).
