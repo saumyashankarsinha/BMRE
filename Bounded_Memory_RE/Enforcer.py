@@ -110,7 +110,7 @@ def enforcer(phi, sigma,maxBuffer):
 				else:
 					sigmaC.append(event)              		
 	eend = time.time()					
-	print("output sequence is "+ str(sigmaS))
+	print("output sequence is "+ str(sigmaS))#comment this while running GeneratePasswordPerformanceEval.py
 
 	 
 #### Ideal Enforcer function to compute the output sequence sigmaS incrementally ##########
@@ -143,4 +143,4 @@ def idealenforcer(phi, sigma):
                 	a=ip
 
     iend = time.time()  
-    print("output sequence is "+ str(isigmaS))
+    print("output sequence is "+ str(isigmaS))##comment this while running GeneratePasswordPerformanceEval.py
