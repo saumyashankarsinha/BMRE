@@ -1,7 +1,7 @@
 #######imports########################################
 import sys
 sys.path.append("../")
-import Enforcer
+import EnforcerEval
 import Automata
 import copy
 import random
@@ -166,12 +166,12 @@ for i in input_sizes_taken:
 	iAvgTime = []
 	clean_time = []
 	for j in range(100): # 100 iterations
-		Enforcer.enforcer(copy.copy(phi1_10), s1+s2, 10)  #phi1_4 is for no of states  # 10 is buffer size
-		eAvgTime.append(Enforcer.eend-Enforcer.estart)
-		clean_time.append(Enforcer.sum)
+		EnforcerEval.enforcer(copy.copy(phi1_10), s1+s2, 10)  #phi1_4 is for no of states  # 10 is buffer size
+		eAvgTime.append(EnforcerEval.eend-EnforcerEval.estart)
+		clean_time.append(EnforcerEval.sum)
 		##########################
-		Enforcer.idealenforcer(copy.copy(phi1_10), s1+s2)
-		iAvgTime.append(Enforcer.iend-Enforcer.istart)
+		EnforcerEval.idealenforcer(copy.copy(phi1_10), s1+s2)
+		iAvgTime.append(EnforcerEval.iend-EnforcerEval.istart)
 	esum=0
 	isum=0
 	clean_sum=0
@@ -181,7 +181,7 @@ for i in input_sizes_taken:
 		clean_sum=clean_sum+clean_time[k]
 	print('BME= '+str(esum/100))
 	#print('BME per event= '+str((esum/100)/i))
-	print('number clean= '+str(Enforcer.y))
+	print('number clean= '+str(EnforcerEval.y))
 	print('time clean= '+str(clean_sum/100))
 	print('t1-t2= '+str((esum/100)-(clean_sum/100)))
 
@@ -190,7 +190,7 @@ for i in input_sizes_taken:
 
 
 
-	dict = {'input length': i, 'total online time for ideal': str(isum/100), 'average time per event for ideal': str((isum/100)/i), 'clean #':Enforcer.y, 'total online time for BME(T1)':esum/100, 'total time clean(T2)':clean_sum/100, 'T1-T2':str((esum/100)-(clean_sum/100))} 
+	dict = {'input length': i, 'total online time for ideal': str(isum/100), 'average time per event for ideal': str((isum/100)/i), 'clean #':EnforcerEval.y, 'total online time for BME(T1)':esum/100, 'total time clean(T2)':clean_sum/100, 'T1-T2':str((esum/100)-(clean_sum/100))} 
 	df1 = pd.DataFrame(dict, index=[0])
 	df= df.append(df1)
 	print (".........................................................")
