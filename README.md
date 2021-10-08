@@ -7,8 +7,8 @@ is bounded/finite. The general schema is shown in the figure below where σ is t
 ![This is an image](https://github.com/saumyashankarsinha/BMRE/blob/main/Images/bme.png)
 
 The bounded-memory enforcer is implemented in Python. The functionality is divided into two modules 
--DFA (contained in Automata.py) and  
--Enforcer (contained in Enforcer.py)  modules. 
+- DFA (contained in Automata.py) and  
+- Enforcer (contained in Enforcer.py)  modules. 
 
 The DFA module contains all the functionalities related to defining the automaton and operations on the automaton. The Enforcer module implements the bounded-memory enforcer. 
 
