@@ -29,4 +29,4 @@ To illustrate the Bounded-memory Runtime Enforcement, some example properties ar
 
 > run *python "give path of GeneratePassword.py file"*
 
-- [ ] The overall architecture will be added in some time :tada:
+- [x] The overall architecture will be added in some time :tada:
