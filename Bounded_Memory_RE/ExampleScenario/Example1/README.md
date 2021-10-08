@@ -6,9 +6,9 @@ Consider a scenario where an application generates passwords for a system, using
 *How to run:*
 Below steps shows how to compute the output sequence (the transformed output which is correct with respect to property φ) incrementally.
 
-> go to Bounded_Memory_RE/Examples
+> go to Bounded_Memory_RE/ExamplesScenario
 
-> open terminal in Examples
+> open terminal in ExamplesScenario
 
 > run *python "give path of GeneratePassword.py file"*
 
@@ -19,9 +19,9 @@ output-
 ## Performance Evaluation
 To compare the performance of both the Bounded-Memory Enforcer and the Ideal Enforcer, the length of input sequence was varied from 10 to 10,000 and the time taken by both the ideal (unbounded) enforcer and the bounded-memory enforcer was measured (all in seconds). 
 
-> go to Bounded_Memory_RE/Examples
+> go to Bounded_Memory_RE/ExamplesScenario
 
-> open terminal in Examples
+> open terminal in ExamplesScenario
 
 > run *python "give path of GeneratePasswordPerformanceEval.py file"*
 
