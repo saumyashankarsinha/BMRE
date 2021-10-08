@@ -23,9 +23,9 @@ To illustrate the Bounded-memory Runtime Enforcement, some example properties ar
 ![This is an image](https://github.com/saumyashankarsinha/BMRE/blob/main/Images/password.png)
 
 *How to run:*
-  >go to Bounded_Memory_RE/Examples
-  >open terminal in Examples
-  >run *python "give path of GeneratePassword.py file"*
+  > go to Bounded_Memory_RE/Examples
+  > open terminal in Examples
+  > run *python "give path of GeneratePassword.py file"*
 
 
 The overall architecture will be added in some time. 
