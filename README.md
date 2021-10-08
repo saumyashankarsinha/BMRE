@@ -10,10 +10,11 @@ The bounded-memory enforcer is implemented in Python. The functionality is divid
 - DFA (contained in Automata.py) module- which contains all the functionalities related to defining the automaton and operations on the automaton;
 - Enforcer (contained in Enforcer.py) module- which implements the bounded-memory enforcer
 
-The enforcer method in the module Enforcer takes three arguments,
+The enforcer method in the module Enforcer takes three arguments,which are: an automaton defining the property (described in the intended format using the  DFA module), a positive integer specifying the buffer size, and a sequence of events.
 > Enforcer.enforcer(copy.copy(phi1_4), ['a', 'a', 'b', 'b', 'c', '1', '2'], 4)  
-  -phi1_4 is for no of states   4 is buffer size
-which are: an automaton defining the property (described in the intended format using the  DFA module), a positive integer specifying the buffer size, and a sequence of events. It computes the output sequence (the transformed output which is correct with respect to property φ) incrementally.
+  -phi1_4 is the automata defining the property to be enforced; ['a', 'a', 'b', 'b', 'c', '1', '2'] is the sequence of events; and 4 is buffer size
+  
+It computes the output sequence (the transformed output which is correct with respect to property φ) incrementally.
 
 
 The performance of the Python implementation of bounded-memory enforcer is evaluated using some example properties. Its performance is also compared against the ideal (unbounded) enforcer. The example properties are located in the Examples folder.
