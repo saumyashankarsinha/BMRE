@@ -11,3 +11,6 @@ Below steps shows how to compute the output sequence (the transformed output whi
 > open terminal in Examples
 
 > run *python "give path of GeneratePassword.py file"*
+
+output-
+![This is an image](https://github.com/saumyashankarsinha/BMRE/blob/main/Images/output.png)
