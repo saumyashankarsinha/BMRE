@@ -37,7 +37,7 @@ Let us consider two example scenarios in autonomous vehicles for measuring the p
   - Checking whether the driver's foot is placed on a brake pedal,
   - Checking whether the driver's gaze is facing forward.
   
-&nbsp &nbsp&nbsp &nbsp Thus, let’s consider the property, “*Upon pressing of the manual mode button, the switching of manual driving mode from autonomous driving mode will be done if all the above three conditions are satisfied i.e., if the driver's hand is holding the steering wheel, his foot is on the brake pedal and his gaze is facing forward then only the mode is switched”. Below figure presents the automaton of the proposed property, where the condition “driver's hand is holding the steering wheel*” is denoted by event A, “driver's foot is placed on a brake pedal” is denoted by event B and “driver's gaze is facing forward” is denoted by event C.
+Thus, let’s consider the property, “*Upon pressing of the manual mode button, the switching of manual driving mode from autonomous driving mode will be done if all the above three conditions are satisfied i.e., if the driver's hand is holding the steering wheel, his foot is on the brake pedal and his gaze is facing forward then only the mode is switched”. Below figure presents the automaton of the proposed property, where the condition “driver's hand is holding the steering wheel*” is denoted by event A, “driver's foot is placed on a brake pedal” is denoted by event B and “driver's gaze is facing forward” is denoted by event C.
 
 <p align="center">
   <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/ManualMode_AV.png" width="250" height="250">
