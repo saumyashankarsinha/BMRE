@@ -54,7 +54,7 @@ Thus, let’s consider the property, “*Upon pressing of the manual mode button
 </p> 
 
 ## How to run:
-In order to run the example to see the output of the enforcer:
+**In order to run the example to see the output of the enforcer:**
 > go to Bounded_Memory_RE/ExamplesScenario
 
 > open terminal in ExamplesScenario
@@ -70,7 +70,7 @@ Note:Line number 152 of GeneratePassword.py calls the enforcer method of the Enf
 (Here phi1_4 is the automata defining the property to be enforced; ['a', 'a', 'b', 'b', 'c', '1', '2'] is the sequence of events; and 4 is buffer size in the above call to the enforcer in line number 152 of GeneratePassword.py.) 
 
 
-In order to run the example to compare the performance of our enforcer with the ideal one:
+**In order to run the example to compare the performance of our enforcer with the ideal one:**
 > go to Bounded_Memory_RE/ExamplesScenario
 
 > open terminal in ExamplesScenario
