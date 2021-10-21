@@ -34,7 +34,12 @@ The contents of the repository is organized as follows: The BMRE repository cont
   - Checking whether the driver's gaze is facing forward.
   
 Thus, let’s consider the property, “*Upon pressing of the manual mode button, the switching of manual driving mode from autonomous driving mode will be done if all the above three conditions are satisfied i.e., if the driver's hand is holding the steering wheel, his foot is on the brake pedal and his gaze is facing forward then only the mode is switched”. Below figure presents the automaton of the proposed property, where the condition “driver's hand is holding the steering wheel*” is denoted by event A, “driver's foot is placed on a brake pedal” is denoted by event B and “driver's gaze is facing forward” is denoted by event C.
-...............................................................................
+
+<p align="center">
+  <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/ManualMode_AV.jpg" width="250" height="250">
+</p>
+
+
 The bounded-memory enforcer is implemented in Python. The functionality is divided into two modules :
 - DFA (contained in Automata.py) module- which contains all the functionalities related to defining the automaton and operations on the automaton;
 - Enforcer (contained in Enforcer.py) module- which implements the bounded-memory enforcer
