@@ -25,7 +25,7 @@ The contents of the repository is organized as follows: The BMRE repository cont
 ## Example Properties
 1. **Logging in AV**: The first example scenario, used to evaluate the performance of our enforcer, contained in the Logging_AV directory, is related to logging of steering commands in Autonomous Vehicle (AV) required for simulations in the lab for future autonomous functions. The path planning steering commands like Move Left, Move Right, Move Forward, and Stop are logged for better testing and validation solutions, each time it is issued. However, due to memory constraints in AV, the data (event) is logged to a remote location. But, logging each event, every time it is issued, to a remote location is difficult. Thus, let’s consider the requirement, “Logging of path planning steering commands should be done, when the vehicle reaches a Stop state”, on the remote logging application to manage the overhead. Below figure presents the automaton of the proposed property.
 
-<p align="right">
+<p align="centre">
   <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/Logging_AV.png" width="250" height="250">
 
 </p>
