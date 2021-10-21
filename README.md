@@ -8,7 +8,7 @@ This repository contains additional material for the work titled "Bounded-Memory
 Runtime Enforcement (RE) is a monitoring technique to ensure that a system obeys a set of formal requirements (properties). RE employs an enforcer (a safety wrapper for the system) which modifies the (untrustworthy) output by performing actions such as delaying (by storing/buffering into its internal memory) and suppressing events, when needed. In usual RE mechanisms, the internal memory of the enforcer is considered to be unbounded/infinite. But in a real situation, the enforcer has a bounded internal memory. So, this work studies RE with a bounded buffer, i.e., it talks about how the enforcer tackles the situation when the buffer
 is bounded/finite. The general schema is shown in the figure below where σ is the sequence of events given as input to the enforcer and o is the transformed output that is correct with respect to property φ.
 
-![This is an image](https://github.com/saumyashankarsinha/BMRE/blob/main/Images/bme.png | width=100)
+![This is an image](https://github.com/saumyashankarsinha/BMRE/blob/main/Images/bme.png | width=50)
 -->
 ## Contents
 The contents of the repository is organized as follows: The BMRE repository contains three directories, the *Source* directory (containing the major implementation functions), the *Example Scenario* directory (containing some examples which has been used to evaluate the performance of the enforcer), and the *Image* directory (containing the illustrative images).
