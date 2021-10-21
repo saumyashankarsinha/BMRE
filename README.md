@@ -54,16 +54,21 @@ Thus, let’s consider the property, “*Upon pressing of the manual mode button
 </p> 
 
 ## How to run:
-The enforcer method of the Enforcer.py takes three arguments, which are: an automaton defining the property (described in the intended format using the  DFA module), a positive integer specifying the buffer size, and a sequence of events as shown below: (phi1_4 is the automata defining the property to be enforced; ['a', 'a', 'b', 'b', 'c', '1', '2'] is the sequence of events; and 4 is buffer size in the above call to the enforcer in line number 152 of GeneratePassword.py. It computes the output sequence (the transformed output which is correct with respect to property φ) incrementally.)
-
-> Enforcer.enforcer(copy.copy(phi1_4), ['a', 'a', 'b', 'b', 'c', '1', '2'], 4)  
-
 In order to run the example to see the output of the enforcer:
 > go to Bounded_Memory_RE/ExamplesScenario
 
 > open terminal in ExamplesScenario
 
 > run *python "give path of GeneratePassword.py file"*
+
+paste imag of output 
+
+Note:Line number 152 of GeneratePassword.py calls the enforcer method of the Enforcer.py which takes three arguments: an automaton defining the property (described in the intended format using the  DFA module), a positive integer specifying the buffer size, and a sequence of events as shown below:
+
+> Enforcer.enforcer(copy.copy(phi1_4), ['a', 'a', 'b', 'b', 'c', '1', '2'], 4)  //calling enforcer method of Enforcer.py to compute the output of the enforcer for GeneratePassword.
+
+(Here phi1_4 is the automata defining the property to be enforced; ['a', 'a', 'b', 'b', 'c', '1', '2'] is the sequence of events; and 4 is buffer size in the above call to the enforcer in line number 152 of GeneratePassword.py.) 
+
 
 In order to run the example to compare the performance of our enforcer with the ideal one:
 > go to Bounded_Memory_RE/ExamplesScenario
