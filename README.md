@@ -27,6 +27,7 @@ The contents of the repository is organized as follows: The BMRE repository cont
 ![This is an image](https://github.com/saumyashankarsinha/BMRE/blob/main/Images/Logging_AV.png)
 
 Location Start is the initial and Stop is the only accepting location, which when reached, starts the logging of steering commands. Thus, the enforcer for the above property must buffer the steering commands into a buffer without logging it to a remote location, until Stop command is issued. Once it issues a Stop command, it can “flush” its buffer to a remote location.
+
 2. **Switching to manual driving mode in autonomous vehicle**: The second example scenario is related to switching a vehicle driving in an autonomous driving mode to a manual driving mode in Autonomous Vehicles. According to the present inventions, when the driver presses the “manual” mode button to switch a vehicle driving from autonomous driving mode to a manual driving mode, the vehicle looks for certain conditions, whose satisfaction will switch the mode. These conditions can be:
  - Checking whether a driver's hand is holding a steering wheel,
  - Checking whether the driver's foot is placed on a brake pedal,
