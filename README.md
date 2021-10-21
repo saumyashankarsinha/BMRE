@@ -1,7 +1,7 @@
 # BMRE
 Bounded-Memory Runtime Enforcer.
 
-This repository contains additional material for the work titled "Bounded-Memory Runtime Enforcer". The bounded-memory runtime enforcement is a monitoring technique to ensure that a system obeys a set of formal requirements (properties) by employing an enforcer (a safety wrapper for the system) which modifies the (untrustworthy) output by performing actions such as delaying (by storing/buffering into its internal memory) and suppressing events, when needed. For storing the events, the enforcer is equipped with a buffer/internal memory which is bounded in this work to represent the general/ real scenarios.
+This repository contains additional material for the work titled "Bounded-Memory Runtime Enforcer". The bounded-memory runtime enforcement is a monitoring technique to ensure that a system obeys a set of formal requirements (properties) by employing an enforcer (a safety wrapper for the system) which modifies the (untrustworthy) output by performing actions such as delaying (by storing/buffering into its internal memory) and suppressing events, when needed. For storing the events, the enforcer is equipped with a buffer/internal memory which is bounded in this work to represent the general/real scenarios.
 
 
 <!-- 
