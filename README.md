@@ -29,9 +29,9 @@ The contents of the repository is organized as follows: The BMRE repository cont
 </p>
 
 2. **Switching to manual driving mode in autonomous vehicle**: The second example scenario, used to evaluate the performance of our enforcer, contained in the ManualMode_AV directory is related to switching a vehicle driving in an autonomous driving mode to a manual driving mode in Autonomous Vehicles. According to the present inventions, when the driver presses the “manual” mode button to switch a vehicle driving from autonomous driving mode to a manual driving mode, the vehicle looks for certain conditions, whose satisfaction will switch the mode. These conditions can be:
-  a. Checking whether a driver's hand is holding a steering wheel,
-  b. Checking whether the driver's foot is placed on a brake pedal,
-  c. Checking whether the driver's gaze is facing forward.
+  1. Checking whether a driver's hand is holding a steering wheel,
+  2. Checking whether the driver's foot is placed on a brake pedal,
+  3. Checking whether the driver's gaze is facing forward.
 Thus, let’s consider the property, “Upon pressing of the manual mode button, the switching of manual driving mode from autonomous driving mode will be done if all the above three conditions are satisfied i.e., if the driver's hand is holding the steering wheel, his foot is on the brake pedal and his gaze is facing forward then only the mode is switched”. Below figure presents the automaton of the proposed property, where the condition “driver's hand is holding the steering wheel” is denoted by event A, “driver's foot is placed on a brake pedal” is denoted by event B and “driver's gaze is facing forward” is denoted by event C.
 ...............................................................................
 The bounded-memory enforcer is implemented in Python. The functionality is divided into two modules :
