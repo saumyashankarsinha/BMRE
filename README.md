@@ -38,6 +38,9 @@ Thus, let’s consider the property, “*Upon pressing of the manual mode button
 <p align="center">
   <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/ManualMode_AV.png" width="250" height="250">
 
+3. **Critical Section Problem**: The third example scenario, used to evaluate the performance of our enforcer, contained in the CriticalSectionProblem directory is related to
+4. **Lock**: The fourth example scenario, used to evaluate the performance of our enforcer, contained in the Lock directory is related to
+  
 The bounded-memory enforcer is implemented in Python. The functionality is divided into two modules :
 - DFA (contained in Automata.py) module- which contains all the functionalities related to defining the automaton and operations on the automaton;
 - Enforcer (contained in Enforcer.py) module- which implements the bounded-memory enforcer
