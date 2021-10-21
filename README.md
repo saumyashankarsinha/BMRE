@@ -23,7 +23,7 @@ The contents of the repository is organized as follows: The BMRE repository cont
   - Lock
   
 ## Example Properties
-Autonomous Vehicle : An autonomous vehicle (AV ) or a self-driving car is a vehicle that is capable of sensing its environment and moving safely with little or no human intervention. They rely on sensors, actuators, complex algorithms, machine learning systems, and powerful processors to execute software. Autonomous vehicles create and maintain a map of their surroundings based on a variety of sensors situated in different parts of the vehicle. Sophisticated software processes all the sensory input, plots a path, and sends instructions to the car’s actuators, which control acceleration, braking, and steering. Hard-coded rules, obstacle avoidance algorithms, predictive modeling, and object recognition help the software follow traffic rules and navigate obstacles.
+### Autonomous Vehicle: An autonomous vehicle (AV ) or a self-driving car is a vehicle that is capable of sensing its environment and moving safely with little or no human intervention. They rely on sensors, actuators, complex algorithms, machine learning systems, and powerful processors to execute software. Autonomous vehicles create and maintain a map of their surroundings based on a variety of sensors situated in different parts of the vehicle. Sophisticated software processes all the sensory input, plots a path, and sends instructions to the car’s actuators, which control acceleration, braking, and steering. Hard-coded rules, obstacle avoidance algorithms, predictive modeling, and object recognition help the software follow traffic rules and navigate obstacles.
 
 Let us consider two example scenarios in autonomous vehicles for measuring the performance of our bounded-memory runtime enforcer.
  
@@ -43,7 +43,7 @@ Thus, let’s consider the property, “*Upon pressing of the manual mode button
   <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/ManualMode_AV.png" width="250" height="250">
 </p>
 
-Concurrency is the ability of different parts or units of a program, algorithm and resources to be executed/used at the same time, without affecting the final outcome. Each hardware/software component is designed to operate correctly, i.e., to obey or to meet certain consistency rules. Concurrent use of shared resources can be a source of indeterminacy leading to issues such as deadlocks, and resource starvation.
+### Concurrency is the ability of different parts or units of a program, algorithm and resources to be executed/used at the same time, without affecting the final outcome. Each hardware/software component is designed to operate correctly, i.e., to obey or to meet certain consistency rules. Concurrent use of shared resources can be a source of indeterminacy leading to issues such as deadlocks, and resource starvation.
 
 Let us consider two example scenarios for measuring the performance of our bounded-memory runtime enforcer.
 
