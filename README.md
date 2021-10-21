@@ -12,7 +12,7 @@ is bounded/finite. The general schema is shown in the figure below where σ is t
 -->
 ## Contents
 The contents of the repository is organized as follows: The BMRE repository contains three directories, the *Source* directory (containing the major implementation functions), the *Example Scenario* directory (containing some examples which has been used to evaluate the performance of the enforcer), and the *Image* directory (containing the illustrative images).
-- The source directory contains source files
+- The Source directory contains source files
   - Automata.py which contains all the functionalities related to defining the automaton and operations on the automaton;
   - Enforcer.py which implements the bounded-memory enforcer;
   - EnforcerEval.py which evaluates our enforcer with respect to the ideal enforcer.
