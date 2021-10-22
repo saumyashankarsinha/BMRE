@@ -75,12 +75,14 @@ Note:Line number 152 of GeneratePassword.py calls the enforcer method of the Enf
 
 
 **In order to run the example to compare the performance of our enforcer with the ideal one:**
-> go to Bounded_Memory_RE/ExamplesScenario
+> go to BMRE
 
-> open terminal in ExamplesScenario
+> open terminal in BMRE
 
 > run *python "give path of GeneratePassword.py file"*
-
+<p align="center">
+  <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/Lock.png" width="250" height="250">
+</p> 
 <!-- 
 The bounded-memory enforcer is implemented in Python. The functionality is divided into two modules :
 - DFA (contained in Automata.py) module- which contains all the functionalities related to defining the automaton and operations on the automaton;
