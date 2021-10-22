@@ -58,22 +58,25 @@ Let us consider two example scenarios related to concurrency for measuring the p
 </p> 
 
 ## How to run:
-**In order to run the example to see the output of the enforcer:**
+The automata is provided in the below intended format:
+<p align="center">
+  <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/phi_Logging_AV.png" width="250" height="250">
+</p> 
+Then the enforcer method of the Enforcer.py is called as shown in the below figure, which takes three arguments: an above automaton defining the property, a positive integer specifying the buffer size, and a sequence of events.
+<p align="center">
+  <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/call_to_Enforcer_Logging_AV.png" width="250" height="250">
+</p>
+**In order to run the example with the above automata to see the output of the enforcer:**
 > go to BMRE
 
 > open terminal in BMRE
 
 > run *python "give path of Output.py file"*
 
+The output is shown as follows:
 <p align="center">
-  <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/Lock.png" width="250" height="250">
+  <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/output_Logging_AV.png" width="250" height="250">
 </p> 
-
-Note:Line number 152 of GeneratePassword.py calls the enforcer method of the Enforcer.py which takes three arguments: an automaton defining the property (described in the intended format using the  DFA module), a positive integer specifying the buffer size, and a sequence of events as shown below:
-
-> Enforcer.enforcer(copy.copy(phi1_4), ['a', 'a', 'b', 'b', 'c', '1', '2'], 4)  //calling enforcer method of Enforcer.py to compute the output of the enforcer for GeneratePassword.
-
-(Here phi1_4 is the automata defining the property to be enforced; ['a', 'a', 'b', 'b', 'c', '1', '2'] is the sequence of events; and 4 is buffer size in the above call to the enforcer in line number 152 of GeneratePassword.py.) 
 
 
 **In order to run the example to compare the performance of our enforcer with the ideal one:**
@@ -82,6 +85,7 @@ Note:Line number 152 of GeneratePassword.py calls the enforcer method of the Enf
 > open terminal in BMRE
 
 > run *python "give path of Performance.py file"*
+
 <p align="center">
   <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/Lock.png" width="250" height="250">
 </p> 
