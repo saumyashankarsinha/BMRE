@@ -60,11 +60,11 @@ Let us consider two example scenarios related to concurrency for measuring the p
 ## How to run:
 The automata is provided in the below intended format:
 <p align="center">
-  <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/phi_Logging_AV.png" width="250" height="250">
+  <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/phi_Logging_AV.png">
 </p> 
 Then the enforcer method of the Enforcer.py is called as shown in the below figure, which takes three arguments: an above automaton defining the property, a positive integer specifying the buffer size, and a sequence of events.
 <p align="center">
-  <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/call_to_Enforcer_Logging_AV.png" width="250" height="250">
+  <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/call_to_Enforcer_Logging_AV.png">
 </p>
 **In order to run the example with the above automata to see the output of the enforcer:**
 > go to BMRE
@@ -75,7 +75,7 @@ Then the enforcer method of the Enforcer.py is called as shown in the below figu
 
 The output is shown as follows:
 <p align="center">
-  <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/output_Logging_AV.png" width="250" height="250">
+  <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/output_Logging_AV.png">
 </p> 
 
 
@@ -87,7 +87,7 @@ The output is shown as follows:
 > run *python "give path of Performance.py file"*
 
 <p align="center">
-  <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/Logging_AV_Performance.png" width="250" height="250">
+  <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/Logging_AV_Performance.png">
 </p> 
 <!-- 
 The bounded-memory enforcer is implemented in Python. The functionality is divided into two modules :
