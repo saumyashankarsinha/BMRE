@@ -102,7 +102,7 @@ for i in input_sizes_taken:
 	print (".........................................................")
 
 #writing to a file	
-df.to_csv('Logging_AV_Performance.csv',mode='a')	
+df.to_csv('Logging_ManualMode_AV_Performance.csv',mode='a')	
 
 
 #
