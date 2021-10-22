@@ -11,12 +11,12 @@ is bounded/finite. The general schema is shown in the figure below where σ is t
 ![This is an image](https://github.com/saumyashankarsinha/BMRE/blob/main/Images/bme.png)
 -->
 ## Contents
-The contents of the repository is organized as follows: The BMRE repository contains three directories, the *Source* directory (containing the major implementation functions), the *Example Scenario* directory (containing some examples which has been used to evaluate the performance of the enforcer), and the *Image* directory (containing the illustrative images).
+The contents of the repository is organized as follows: The BMRE repository contains three directories, the *Source* directory (containing the major implementation functions), the *Example Scenario* directory (containing some examples which has been used to evaluate the performance of the enforcer), and the *Images* directory (containing the illustrative images).
 - The Source directory contains source files
   - Automata.py which contains all the functionalities related to defining the automaton and operations on the automaton;
   - Enforcer.py which implements the bounded-memory enforcer;
   - EnforcerEval.py which evaluates our enforcer with respect to the ideal enforcer.
-- The Example Scenario directory contains four example scenarios contained in the following directories:
+- The Example Scenario directory contains four example scenarios contained in the following directories, which have been used for evaluating performances:
   - Logging_AV
   - ManualMode_AV
   - CriticalSectionProblem 
@@ -37,7 +37,7 @@ Let us consider two example scenarios in autonomous vehicles for measuring the p
   - Checking whether the driver's foot is placed on a brake pedal,
   - Checking whether the driver's gaze is facing forward.
   
-Thus, let’s consider the property, “*Upon pressing of the manual mode button, the switching of manual driving mode from autonomous driving mode will be done if all the above three conditions are satisfied i.e., if the driver's hand is holding the steering wheel, his foot is on the brake pedal and his gaze is facing forward then only the mode is switched”. Below figure presents the automaton of the proposed property, where the condition “driver's hand is holding the steering wheel*” is denoted by event A, “driver's foot is placed on a brake pedal” is denoted by event B and “driver's gaze is facing forward” is denoted by event C.
+Thus, let’s consider the property, “*Upon pressing of the manual mode button, the switching of manual driving mode from autonomous driving mode will be done if all the above three conditions are satisfied i.e., if the driver's hand is holding the steering wheel, his foot is on the brake pedal and his gaze is facing forward then only the mode is switched”*. Below figure presents the automaton of the proposed property, where the condition “driver's hand is holding the steering wheel” is denoted by event A, “driver's foot is placed on a brake pedal” is denoted by event B and “driver's gaze is facing forward” is denoted by event C. The performance summary of this example scenario is included in the ManualMode_AV directory.
 
 <p align="center">
   <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/ManualMode_AV.png" width="250" height="250">
