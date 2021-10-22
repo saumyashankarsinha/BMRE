@@ -59,40 +59,7 @@ Let us consider two example scenarios related to concurrency for measuring the p
 
 ## How to run:
 The automata is provided in the below intended format:
->phi = Automata.DFA(
->   # Input alphabets
->   ['r', 'l', 'f', 's'],
-    # states
-    ['stop', 'start', 'right', 'left', 'forward', 'dead'],
-    'start',
-    lambda q: q in ['stop'],
-    lambda q, a: {
-        ('start', 'r'): 'right',
-        ('start', 'l'): 'left',
-        ('start', 'f'): 'forward',
-        ('start', 's'): 'stop',
-        ('right', 'r'): 'right',
-        ('right', 'l'): 'left',
-        ('right', 'f'): 'forward',
-        ('right', 's'): 'stop',
-        ('left', 'r'): 'right',
-        ('left', 'l'): 'left',
-        ('left', 'f'): 'forward',
-        ('left', 's'): 'stop',
-        ('forward', 'r'): 'right',
-        ('forward', 'l'): 'left',
-        ('forward', 'f'): 'forward',
-        ('forward', 's'): 'stop',
-        ('stop', 'r'): 'dead',
-        ('stop', 'l'): 'dead',
-        ('stop', 'f'): 'dead',
-        ('stop', 's'): 'dead',
-	('dead', 'r'): 'dead',
-        ('dead', 'l'): 'dead',
-        ('dead', 'f'): 'dead',
-        ('dead', 's'): 'dead',
-    }[(q, a)]
-)
+
 <p align="center">
   <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/phi_Logging_AV.png">
 </p> 
