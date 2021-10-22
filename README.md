@@ -87,7 +87,7 @@ The output is shown as follows:
 > run *python "give path of Performance.py file"*
 
 <p align="center">
-  <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/Lock.png" width="250" height="250">
+  <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/Logging_AV_Performance.png" width="250" height="250">
 </p> 
 <!-- 
 The bounded-memory enforcer is implemented in Python. The functionality is divided into two modules :
