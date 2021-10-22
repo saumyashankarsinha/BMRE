@@ -60,8 +60,8 @@ Let us consider two example scenarios related to concurrency for measuring the p
 ## How to run:
 The automata is provided in the below intended format:
 >phi = Automata.DFA(
-    # Input alphabets
-    ['r', 'l', 'f', 's'],
+>   # Input alphabets
+>   ['r', 'l', 'f', 's'],
     # states
     ['stop', 'start', 'right', 'left', 'forward', 'dead'],
     'start',
