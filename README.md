@@ -11,12 +11,12 @@ is bounded/finite. The general schema is shown in the figure below where σ is t
 ![This is an image](https://github.com/saumyashankarsinha/BMRE/blob/main/Images/bme.png)
 -->
 ## Contents
-The contents of the repository is organized as follows: The BMRE repository contains three directories, the *Source* directory (containing the major implementation functions), the *Example Scenario* directory (containing some examples which has been used to evaluate the performance of the enforcer), and the *Images* directory (containing the illustrative images).
+The contents of the repository is organized as follows: The BMRE repository contains three directories, the *Source* directory (containing the major implementation functions), the *ExampleScenario* directory (containing some examples which has been used to evaluate the performance of the enforcer), and the *Images* directory (containing the illustrative images).
 - The Source directory contains source files
   - Automata.py which contains all the functionalities related to defining the automaton and operations on the automaton;
   - Enforcer.py which implements the bounded-memory enforcer;
   - EnforcerEval.py which evaluates our enforcer with respect to the ideal enforcer.
-- The Example Scenario directory contains four example scenarios contained in the following directories, which have been used for evaluating performances:
+- The ExampleScenario directory contains four example scenarios contained in the following directories, which have been used for evaluating performances:
   - Logging_AV
   - ManualMode_AV
   - CriticalSectionProblem 
@@ -59,13 +59,15 @@ Let us consider two example scenarios related to concurrency for measuring the p
 
 ## How to run:
 **In order to run the example to see the output of the enforcer:**
-> go to Bounded_Memory_RE/ExamplesScenario
+> go to BMRE
 
-> open terminal in ExamplesScenario
+> open terminal in BMRE
 
-> run *python "give path of GeneratePassword.py file"*
+> run *python "give path of Output.py file"*
 
-paste imag of output 
+<p align="center">
+  <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/Lock.png" width="250" height="250">
+</p> 
 
 Note:Line number 152 of GeneratePassword.py calls the enforcer method of the Enforcer.py which takes three arguments: an automaton defining the property (described in the intended format using the  DFA module), a positive integer specifying the buffer size, and a sequence of events as shown below:
 
@@ -79,7 +81,7 @@ Note:Line number 152 of GeneratePassword.py calls the enforcer method of the Enf
 
 > open terminal in BMRE
 
-> run *python "give path of GeneratePassword.py file"*
+> run *python "give path of Performance.py file"*
 <p align="center">
   <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/Lock.png" width="250" height="250">
 </p> 
