@@ -16,7 +16,7 @@ The contents of the repository is organized as follows: The BMRE repository cont
   - Automata.py which contains all the functionalities related to defining the automaton and operations on the automaton;
   - Enforcer.py which implements the bounded-memory enforcer;
   - EnforcerEval.py which evaluates our enforcer with respect to the ideal enforcer.
-- The ExampleScenario directory contains four example scenarios contained in the following directories, which have been used for evaluating performances:
+- The ExampleScenario directory contains four example scenarios contained in the following directories, which have been used for evaluating performances (explained below):
   - Logging_AV
   - ManualMode_AV
   - CriticalSectionProblem 
