@@ -10,5 +10,5 @@ Performance evaluation:
   <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/Logging_AV_Performance.png">
 </p> 
 <p align="center">
-  <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/Logging_AV_Performance.png">
+  <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/Logging_AV_Performance_csv.png">
 </p> 
