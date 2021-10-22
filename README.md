@@ -66,6 +66,7 @@ Then the enforcer method of the Enforcer.py is called as shown in the below figu
 <p align="center">
   <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/call_to_Enforcer_Logging_AV.png">
 </p>
+
 **In order to run the example with the above automata to see the output of the enforcer:**
 > go to BMRE
 
