@@ -25,7 +25,8 @@ The contents of the repository is organized as follows: The BMRE repository cont
 ## Example Property
 To illustrate the Bounded-memory Runtime Enforcement, the example property taken in the referenced paper (Example 3. Generate Password of Bounded-Memory Runtime Enforcement) is explained below:
 
-The scenario considered is an application that generates passwords for a system, using characters and digits. The specific requirement supposed is, *“The password should start with one or more characters and end with one or more digits”*. The password is valid only if this required format condition holds. The automaton in the below figure defines this requirement φ. The alphabets and digits provided are {a, b, c} and {1, 2} respectively. The enforcer for φ buffers all the characters without generating an authentic password for the user, until atleast one digit is received. Once it receives a digit, it “flushes” its buffer and provide the password.
+The scenario considered is an application that generates passwords for a system, using characters and digits. The specific requirement supposed is, *“The password should start with one or more characters and end with one or more digits”*. The password is valid only if this required format condition holds. The automaton in the below figure defines this requirement φ. The alphabets and digits provided are {a, b, c} and {1, 2} respectively. The enforcer for φ buffers all the characters without generating an authentic password for the user, until atleast one digit is received. Once it receives a digit, it “flushes” its buffer and provide the password. 
+
 <p align="center">
   <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/Gp.jpg">
 </p>
@@ -41,9 +42,9 @@ Let us consider two example scenarios in autonomous vehicles for measuring the p
 </p>
 
 2. Switching to manual driving mode in autonomous vehicle: The second example scenario, used to evaluate the performance of our enforcer, contained in the ManualMode_AV directory is related to switching a vehicle driving in an autonomous driving mode to a manual driving mode in Autonomous Vehicles. According to the present inventions, when the driver presses the “manual” mode button to switch a vehicle driving from autonomous driving mode to a manual driving mode, the vehicle looks for certain conditions, whose satisfaction will switch the mode. These conditions can be:
-       - Checking whether a driver's hand is holding a steering wheel,
-       - Checking whether the driver's foot is placed on a brake pedal,
-       - Checking whether the driver's gaze is facing forward.
+     - Checking whether a driver's hand is holding a steering wheel,
+     - Checking whether the driver's foot is placed on a brake pedal,
+     - Checking whether the driver's gaze is facing forward.
   
 Thus, let’s consider the property, “*Upon pressing of the manual mode button, the switching of manual driving mode from autonomous driving mode will be done if all the above three conditions are satisfied i.e., if the driver's hand is holding the steering wheel, his foot is on the brake pedal and his gaze is facing forward then only the mode is switched”*. Below figure presents the automaton of the proposed property, where the condition “driver's hand is holding the steering wheel” is denoted by event A, “driver's foot is placed on a brake pedal” is denoted by event B and “driver's gaze is facing forward” is denoted by event C. It is here assumed that once an event is received, meaning that the condition respective to that event is satisfied, it remains satisfied. The performance summary of this example scenario is included in the ManualMode_AV directory.
 
