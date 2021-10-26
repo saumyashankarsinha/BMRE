@@ -41,9 +41,8 @@ Let us consider two example scenarios in autonomous vehicles for measuring the p
 </p>
 
 2. Switching to manual driving mode in autonomous vehicle: The second example scenario, used to evaluate the performance of our enforcer, contained in the ManualMode_AV directory is related to switching a vehicle driving in an autonomous driving mode to a manual driving mode in Autonomous Vehicles. According to the present inventions, when the driver presses the “manual” mode button to switch a vehicle driving from autonomous driving mode to a manual driving mode, the vehicle looks for certain conditions, whose satisfaction will switch the mode. These conditions can be:
-&nbsp;
-  - Checking whether a driver's hand is holding a steering wheel,
-  - Checking whether the driver's foot is placed on a brake pedal,
+  -- Checking whether a driver's hand is holding a steering wheel,
+  -- Checking whether the driver's foot is placed on a brake pedal,
   - Checking whether the driver's gaze is facing forward.
   
 &nbsp;
