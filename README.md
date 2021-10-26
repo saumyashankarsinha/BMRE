@@ -31,7 +31,7 @@ The scenario considered is an application that generates passwords for a system,
 </p>
 
 ## Other example scenario
-*Scenario 1. Autonomous Vehicle: An autonomous vehicle (AV ) or a self-driving car is a vehicle that is capable of sensing its environment and moving safely with little or no human intervention. They rely on sensors, actuators, complex algorithms, machine learning systems, and powerful processors to execute software. Autonomous vehicles create and maintain a map of their surroundings based on a variety of sensors situated in different parts of the vehicle. Sophisticated software processes all the sensory input, plots a path, and sends instructions to the car’s actuators, which control acceleration, braking, and steering. Hard-coded rules, obstacle avoidance algorithms, predictive modeling, and object recognition help the software follow traffic rules and navigate obstacles.*
+***Scenario 1.** Autonomous Vehicle: An autonomous vehicle (AV ) or a self-driving car is a vehicle that is capable of sensing its environment and moving safely with little or no human intervention. They rely on sensors, actuators, complex algorithms, machine learning systems, and powerful processors to execute software. Autonomous vehicles create and maintain a map of their surroundings based on a variety of sensors situated in different parts of the vehicle. Sophisticated software processes all the sensory input, plots a path, and sends instructions to the car’s actuators, which control acceleration, braking, and steering. Hard-coded rules, obstacle avoidance algorithms, predictive modeling, and object recognition help the software follow traffic rules and navigate obstacles.*
 
 Let us consider two example scenarios in autonomous vehicles for measuring the performance of our bounded-memory runtime enforcer.
  
@@ -41,9 +41,9 @@ Let us consider two example scenarios in autonomous vehicles for measuring the p
 </p>
 
 2. Switching to manual driving mode in autonomous vehicle: The second example scenario, used to evaluate the performance of our enforcer, contained in the ManualMode_AV directory is related to switching a vehicle driving in an autonomous driving mode to a manual driving mode in Autonomous Vehicles. According to the present inventions, when the driver presses the “manual” mode button to switch a vehicle driving from autonomous driving mode to a manual driving mode, the vehicle looks for certain conditions, whose satisfaction will switch the mode. These conditions can be:
- - Checking whether a driver's hand is holding a steering wheel,
- - Checking whether the driver's foot is placed on a brake pedal,
- - Checking whether the driver's gaze is facing forward.
+       - Checking whether a driver's hand is holding a steering wheel,
+       - Checking whether the driver's foot is placed on a brake pedal,
+       - Checking whether the driver's gaze is facing forward.
   
 Thus, let’s consider the property, “*Upon pressing of the manual mode button, the switching of manual driving mode from autonomous driving mode will be done if all the above three conditions are satisfied i.e., if the driver's hand is holding the steering wheel, his foot is on the brake pedal and his gaze is facing forward then only the mode is switched”*. Below figure presents the automaton of the proposed property, where the condition “driver's hand is holding the steering wheel” is denoted by event A, “driver's foot is placed on a brake pedal” is denoted by event B and “driver's gaze is facing forward” is denoted by event C. It is here assumed that once an event is received, meaning that the condition respective to that event is satisfied, it remains satisfied. The performance summary of this example scenario is included in the ManualMode_AV directory.
 
@@ -51,7 +51,7 @@ Thus, let’s consider the property, “*Upon pressing of the manual mode button
   <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/ManualMode_AV.png" width="250" height="250">
 </p>
 
-*Scenario 2. Concurrency: Concurrency is the ability of different parts or units of a program, algorithm and resources to be executed/used at the same time, without affecting the final outcome. Each hardware/software component is designed to operate correctly, i.e., to obey or to meet certain consistency rules. Concurrent use of shared resources can be a source of indeterminacy leading to issues such as deadlocks, and resource starvation.*
+***Scenario 2.** Concurrency: Concurrency is the ability of different parts or units of a program, algorithm and resources to be executed/used at the same time, without affecting the final outcome. Each hardware/software component is designed to operate correctly, i.e., to obey or to meet certain consistency rules. Concurrent use of shared resources can be a source of indeterminacy leading to issues such as deadlocks, and resource starvation.*
 
 Let us consider two example scenarios related to concurrency for measuring the performance of our bounded-memory runtime enforcer.
 
