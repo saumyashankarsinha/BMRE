@@ -22,7 +22,15 @@ The contents of the repository is organized as follows: The BMRE repository cont
   - CriticalSectionProblem 
   - Lock
   
-## Example Properties
+## Example Property
+To illustrate the Bounded-memory Runtime Enforcement, the example property taken in the referenced paper (Example 3. Generate Password of Bounded-Memory Runtime Enforcement) is explained below:
+
+The scenario considered is an application that generates passwords for a system, using characters and digits. Let us suppose that the generated password should meet a specific requirement which is, *“The password should start with one or more characters and end with one or more digits”*. The password is valid only if this required format condition holds. The automaton in the below figure defines this requirement φ. Let us suppose the alphabets and digits provided are {a, b, c} and {1, 2} respectively. The enforcer for φ must buffer all the characters without generating an authentic password for the user, until atleast one digit is received. Once it receives a digit, it can “flush” its buffer and provide the password.
+<p align="center">
+  <img src="" width="250" height="250">
+</p>
+
+
 #### Autonomous Vehicle: An autonomous vehicle (AV ) or a self-driving car is a vehicle that is capable of sensing its environment and moving safely with little or no human intervention. They rely on sensors, actuators, complex algorithms, machine learning systems, and powerful processors to execute software. Autonomous vehicles create and maintain a map of their surroundings based on a variety of sensors situated in different parts of the vehicle. Sophisticated software processes all the sensory input, plots a path, and sends instructions to the car’s actuators, which control acceleration, braking, and steering. Hard-coded rules, obstacle avoidance algorithms, predictive modeling, and object recognition help the software follow traffic rules and navigate obstacles.
 
 Let us consider two example scenarios in autonomous vehicles for measuring the performance of our bounded-memory runtime enforcer.
