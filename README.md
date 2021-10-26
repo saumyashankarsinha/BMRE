@@ -82,7 +82,7 @@ The performance summary of this example scenario is included in the CriticalSect
 <p align="center">
   <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/Lock.png" width="250" height="250">
 </p> 
-So lock on data items {A, B} is acquired by a transaction when the events arrive in a proper order, until then data items are not locked and every request is buffered. When requests comes which results in satisfaction of the above concurrency property then lock is acquired on the data items, and the buffer is flushed for new set of requests. This property can be successfully enforced with our bounded enforcer because when a data event is locked then locking it again making no difference. Thus, when the requests are buffered and the buffer is full, then for an incoming event ready to be buffered, the idempotent
+So, lock on data items {A, B} is acquired by a transaction when the events arrive in a proper order, until then data items are not locked and every request is buffered. When requests comes which results in satisfaction of the above concurrency property then lock is acquired on the data items, and the buffer is flushed for new set of requests. This property can be successfully enforced with our bounded enforcer because when a data event is locked then locking it again makes no difference. Thus, when the requests are buffered and the buffer is full, then for an incoming event ready to be buffered, the idempotent events (the events engaged in cycle) can be suppressed.
 
 The performance summary of this example scenario is included in the Lock directory.
 
