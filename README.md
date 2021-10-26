@@ -33,8 +33,7 @@ The scenario considered is an application that generates passwords for a system,
 ## Other example scenario
 *Scenario 1. Autonomous Vehicle: An autonomous vehicle (AV ) or a self-driving car is a vehicle that is capable of sensing its environment and moving safely with little or no human intervention. They rely on sensors, actuators, complex algorithms, machine learning systems, and powerful processors to execute software. Autonomous vehicles create and maintain a map of their surroundings based on a variety of sensors situated in different parts of the vehicle. Sophisticated software processes all the sensory input, plots a path, and sends instructions to the car’s actuators, which control acceleration, braking, and steering. Hard-coded rules, obstacle avoidance algorithms, predictive modeling, and object recognition help the software follow traffic rules and navigate obstacles.*
 
-&nbsp;
-: Let us consider two example scenarios in autonomous vehicles for measuring the performance of our bounded-memory runtime enforcer.
+Let us consider two example scenarios in autonomous vehicles for measuring the performance of our bounded-memory runtime enforcer.
  
 1. Logging in AV: The first example scenario, used to evaluate the performance of our enforcer, contained in the Logging_AV directory, is related to logging of steering commands in Autonomous Vehicle (AV) required for simulations in the lab for future autonomous functions. The path planning steering commands like Move Left, Move Right, Move Forward, and Stop are logged for better testing and validation solutions, each time it is issued. However, due to memory constraints in AV, the data (event) is logged to a remote location. But, logging each event, every time it is issued, to a remote location is difficult. Thus, let’s consider the requirement, “*Logging of path planning steering commands should be done, when the vehicle reaches a Stop state*”, on the remote logging application to manage the overhead. Below figure presents the automaton of the proposed property. Location Start is the initial and Stop is the only accepting location, which when reached, starts the logging of steering commands. Thus, the enforcer for the above property must buffer the steering commands into a buffer without logging it to a remote location, until Stop command is issued. Once it issues a Stop command, it can “flush” its buffer to a remote location. The performance summary of this example scenario is included in the Logging_AV directory.
 <p align="center">
@@ -42,10 +41,12 @@ The scenario considered is an application that generates passwords for a system,
 </p>
 
 2. Switching to manual driving mode in autonomous vehicle: The second example scenario, used to evaluate the performance of our enforcer, contained in the ManualMode_AV directory is related to switching a vehicle driving in an autonomous driving mode to a manual driving mode in Autonomous Vehicles. According to the present inventions, when the driver presses the “manual” mode button to switch a vehicle driving from autonomous driving mode to a manual driving mode, the vehicle looks for certain conditions, whose satisfaction will switch the mode. These conditions can be:
+&nbsp;
   - Checking whether a driver's hand is holding a steering wheel,
   - Checking whether the driver's foot is placed on a brake pedal,
   - Checking whether the driver's gaze is facing forward.
   
+&nbsp;
 Thus, let’s consider the property, “*Upon pressing of the manual mode button, the switching of manual driving mode from autonomous driving mode will be done if all the above three conditions are satisfied i.e., if the driver's hand is holding the steering wheel, his foot is on the brake pedal and his gaze is facing forward then only the mode is switched”*. Below figure presents the automaton of the proposed property, where the condition “driver's hand is holding the steering wheel” is denoted by event A, “driver's foot is placed on a brake pedal” is denoted by event B and “driver's gaze is facing forward” is denoted by event C. It is here assumed that once an event is received, meaning that the condition respective to that event is satisfied, it remains satisfied. The performance summary of this example scenario is included in the ManualMode_AV directory.
 
 <p align="center">
