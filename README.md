@@ -56,14 +56,9 @@ Thus, let’s consider the property, “*Upon pressing of the manual mode button
 <p align="center">
   <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/ManualMode_AV.png" width="250" height="250">
 </p>
-Thus, the enforcer for the above property must buffer the events received into the memory of the enforcer without changing the mode from autonomous driving mode to manual driving mode, until it receives all those events. Once it receives all the events (meaning all the three conditions are satisfied), it can “flush” its buffer and do the required mode change. This property can be successfully enforced with our bounded enforcer because suppose if we received an event "A" corresponding to its condition twice, then the second event "A", can be suppressed as it would be an idempotent event whose repeated occurance would be unnecessary. 
+Thus, the enforcer for the above property must buffer the events received into the memory of the enforcer without changing the mode from autonomous driving mode to manual driving mode, until it receives all those events. Once it receives all the events (meaning all the three conditions are satisfied), it can “flush” its buffer and do the required mode change. This property can be successfully enforced with our bounded enforcer because suppose if we receive an event "A" (corresponding to its condition) twice, then the second event "A" (certainly engaged in cycle), can be suppressed as it would be an idempotent event whose repeated occurance would not be helpful. Thus the enforcer can unhesitatingly suppress that event and make a room for the incoming events and repeat the same  until it receives all the three events.
 
-
-if the vehicle is looking for all the three conditions to be satisfied, but has not received one or two events resulting in satisfaction of its corresponding conditions and is receiving again and again those previously received events then it can suppress those received events 
-
-
-
-an event is received such as that all the three cofor an incoming event which needs to be buffered and we don't have a room in the memory to buffer it, then the events making a (minimal) cycle in the property automaton can be discarded as the previous event received just before that event is same as the event making a cycle, hence will not make much difference to the logging.  The performance summary of this example scenario is included in the ManualMode_AV directory.
+The performance summary of this example scenario is included in the ManualMode_AV directory.
 
 
 ***Scenario 2.** Concurrency: Concurrency is the ability of different parts or units of a program, algorithm and resources to be executed/used at the same time, without affecting the final outcome. Each hardware/software component is designed to operate correctly, i.e., to obey or to meet certain consistency rules. Concurrent use of shared resources can be a source of indeterminacy leading to issues such as deadlocks, and resource starvation.*
