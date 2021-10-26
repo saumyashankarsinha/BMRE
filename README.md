@@ -80,7 +80,7 @@ The performance summary of this example scenario is included in the CriticalSect
 
 2. Lock: The fourth example scenario, used to evaluate the performance of our enforcer, contained in the Lock directory is related to concurrency control in transactions. Concurrency control techniques are used to ensure that the Isolation property of concurrently executing transactions is maintained. There are different concurrency control protocols e.g. lock based protocol. A lock is a variable associated with a data item that describes a status of data item with respect to possible operation that can be applied to it. They synchronize the access by concurrent transactions to the database items. Let us consider a specific requirement on the database system, “*For database items {A, B}, any transaction accessing both A and B must access A before accessing B.*” Below figure presents the automaton of the proposed property. So the data items {A, B} are released by a transaction when the events arrive in a proper order (terminating with commit), until then all operations are buffered. So, if the lock requests comes in such a way that the property is not satisfied, then these requests are buffered and lock is not acquired, but when requests comes which results in satisfaction of the above concurrency property then lock is acquired on the data items, and the buffer is flushed for new set of requests. The performance summary of this example scenario is included in the Lock directory.
 <p align="center">
-  <img src="" width="250" height="250">
+  <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/Lock.png" width="250" height="250">
 </p> 
 
 ## How to run:
