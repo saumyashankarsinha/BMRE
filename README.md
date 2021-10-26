@@ -27,7 +27,7 @@ To illustrate the Bounded-memory Runtime Enforcement, the example property taken
 
 The scenario considered is an application that generates passwords for a system, using characters and digits. The specific requirement supposed is, *“The password should start with one or more characters and end with one or more digits”*. The password is valid only if this required format condition holds. The automaton in the below figure defines this requirement φ. The alphabets and digits provided are {a, b, c} and {1, 2} respectively. The enforcer for φ buffers all the characters without generating an authentic password for the user, until atleast one digit is received. Once it receives a digit, it “flushes” its buffer and provide the password.
 <p align="center">
-  <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/Gp.png" width="250" height="250">
+  <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/Gp.jpg" width="250" height="250">
 </p>
 
 ## Other example scenario
