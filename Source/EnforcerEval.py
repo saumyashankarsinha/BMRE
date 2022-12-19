@@ -56,9 +56,10 @@ def clean(sigmaC,phiautomata,maxBuffer,k,event):
 
 #### Bounded Memory Enforcer function to compute the output sequence sigmaS incrementally #######
 def enforcer(phi, sigma,maxBuffer): 
-	if maxBuffer < len(phi.Q):
-			print('your buffer is not of reasonable size')
-			exit() 
+        
+	#if maxBuffer < len(phi.Q):
+	#		print('your buffer is not of reasonable size')
+	#		exit() 
 	global estart
 	global eend
 	global y
@@ -111,6 +112,7 @@ def enforcer(phi, sigma,maxBuffer):
 					sigmaC.append(event)              		
 	eend = time.time()					
 	#print("output sequence is "+ str(sigmaS))#comment this while running GeneratePasswordPerformanceEval.py
+	return sigmaS
 
 	 
 #### Ideal Enforcer function to compute the output sequence sigmaS incrementally ##########
@@ -144,3 +146,4 @@ def idealenforcer(phi, sigma):
 
     iend = time.time()  
     #print("output sequence is "+ str(isigmaS))##comment this while running GeneratePasswordPerformanceEval.py
+    return isigmaS
