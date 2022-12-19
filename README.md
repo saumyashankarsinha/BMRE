@@ -22,7 +22,18 @@ The contents of the repository is organized as follows: The BMRE repository cont
   - CriticalSectionProblem 
   - Lock
 
-  - [x] Determining memory bounds with probabilistic analysis is illustrated for Logging_AV case study.
+- [x] Determining memory bounds with probabilistic analysis is illustrated for Logging_AV case study.
+
+- [x] The Version2.zip file contains the implementation of the scenario of logging of steering commands in an Autonomous Vehicle (AV) to show the usefulness and applicability of the bounded-memory enforcer in a real-world context.
+  - The file Automata.py  contains all the functionalities related to defining the automaton and operations on the automaton;
+  - The file driver.py will read the images from the images folder (the image folder contains the images captured by the camera of the prototype autonomous vehicle for illustration purpose here; however, the images can be captured in real time and can be fed to driver.py.)
+  - The images are then fed to the function myFunction2 of the function.c which will extract the Result (resultant difference between the lane and frame centre of the track in the image).
+  - This Result is used by driver.py to compute the steering commands which is given to the bounded enforcer as an input for the enforcement process.
+
+
+
+
+
 ## Example Property
 To illustrate the Bounded-memory Runtime Enforcement, the example property taken in the referenced paper (Example 3. Generate Password of Bounded-Memory Runtime Enforcement) is explained below:
 
