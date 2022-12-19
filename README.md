@@ -1,7 +1,8 @@
 # BMRE
-Bounded-Memory Runtime Enforcement.
+Bounded-Memory Runtime Enforcer.
  
-This repository contains additional material for the work titled "Bounded-Memory Runtime Enforcement". The bounded-memory runtime enforcement is a monitoring technique to ensure that a system obeys a set of formal requirements (properties) by employing an enforcer (a safety wrapper for the system) which modifies the (untrustworthy) output by performing actions such as delaying (by storing/buffering into its internal memory) and suppressing events, when needed. For storing the events, the enforcer is equipped with a buffer/internal memory which is bounded in this work to represent the general/real scenarios.
+This repository contains additional material for the work titled "Bounded-Memory Runtime Enforcer" and "Bounded-Memory Runtime Enforcement
+with Probabilistic and Performance Analysis". The bounded-memory runtime enforcement is a monitoring technique to ensure that a system obeys a set of formal requirements (properties) by employing an enforcer (a safety wrapper for the system) which modifies the (untrustworthy) output by performing actions such as delaying (by storing/buffering into its internal memory) and suppressing events, when needed. For storing the events, the enforcer is equipped with a buffer/internal memory which is bounded in this work to represent the general/real scenarios.
 
 <!-- 
 Runtime Enforcement (RE) is a monitoring technique to ensure that a system obeys a set of formal requirements (properties). RE employs an enforcer (a safety wrapper for the system) which modifies the (untrustworthy) output by performing actions such as delaying (by storing/buffering into its internal memory) and suppressing events, when needed. In usual RE mechanisms, the internal memory of the enforcer is considered to be unbounded/infinite. But in a real situation, the enforcer has a bounded internal memory. So, this work studies RE with a bounded buffer, i.e., it talks about how the enforcer tackles the situation when the buffer
@@ -15,20 +16,24 @@ The contents of the repository is organized as follows: The BMRE repository cont
   - Automata.py which contains all the functionalities related to defining the automaton and operations on the automaton;
   - Enforcer.py which implements the bounded-memory enforcer;
   - EnforcerEval.py which evaluates our enforcer with respect to the ideal enforcer.
-- The ExampleScenario directory contains four example scenarios contained in the following directories, which have been used for evaluating performances (explained below). It also contains varying_complexity_of_property directory which contains the implementation of varying complexity of the property and accessing the performances of bounded-memory and ideal enforcer.
+- The ExampleScenario directory contains four example scenarios contained in the following directories, which have been used for evaluating performances (explained below):
   - Logging_AV
   - ManualMode_AV
   - CriticalSectionProblem 
   - Lock
-  
+
+  - [x] Determining memory bounds with probabilistic analysis is illustrated for Logging_AV case study.
 ## Example Property
 To illustrate the Bounded-memory Runtime Enforcement, the example property taken in the referenced paper (Example 3. Generate Password of Bounded-Memory Runtime Enforcement) is explained below:
 
 The scenario considered is an application that generates passwords for a system, using characters and digits. The specific requirement supposed is, *“The password should start with one or more characters and end with one or more digits”*. The password is valid only if this required format condition holds. The automaton in the below figure defines this requirement φ. The alphabets and digits provided are {a, b, c} and {1, 2} respectively. The enforcer for φ buffers all the characters without generating an authentic password for the user, until atleast one digit is received. Once it receives a digit, it “flushes” its buffer and provide the password. 
 
+
 <p align="center">
   <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/Gp.jpg">
 </p>
+
+
 
 ## Other example scenario
 ***Scenario 1.** Autonomous Vehicle: An autonomous vehicle (AV ) or a self-driving car is a vehicle that is capable of sensing its environment and moving safely with little or no human intervention. They rely on sensors, actuators, complex algorithms, machine learning systems, and powerful processors to execute software. Autonomous vehicles create and maintain a map of their surroundings based on a variety of sensors situated in different parts of the vehicle. Sophisticated software processes all the sensory input, plots a path, and sends instructions to the car’s actuators, which control acceleration, braking, and steering. Hard-coded rules, obstacle avoidance algorithms, predictive modeling, and object recognition help the software follow traffic rules and navigate obstacles.*
@@ -135,4 +140,3 @@ To illustrate the Bounded-memory Runtime Enforcement, some example properties ar
 
 ![This is an image](https://github.com/saumyashankarsinha/BMRE/blob/main/Images/password.png)
 -->
-- [ ] The overall architecture will be added in some time :tada:
