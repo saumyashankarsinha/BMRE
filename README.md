@@ -11,7 +11,8 @@ is bounded/finite. The general schema is shown in the figure below where σ is t
 ![This is an image](https://github.com/saumyashankarsinha/BMRE/blob/main/Images/bme.png)
 -->
 ## Contents
-The contents of the repository is organized as follows: The BMRE repository contains three directories, the *Source* directory (containing the major implementation functions), the *ExampleScenario* directory (containing some examples which has been used to evaluate the performance of the enforcer), and the *Images* directory (containing the illustrative images).
+The contents of the repository is organized as follows: The BMRE repository contains four directories, the *Source* directory (containing the major implementation functions), the *ExampleScenario* directory (containing some examples which has been used to evaluate the performance of the enforcer), the *Images* directory (containing the illustrative images) and the *varying_complexity_of_property* directory (containing the source file to vary the complexity of the property and access the performances of bounded-memory and ideal enforcer).
+
 - The Source directory contains source files
   - Automata.py which contains all the functionalities related to defining the automaton and operations on the automaton;
   - Enforcer.py which implements the bounded-memory enforcer;
@@ -22,7 +23,7 @@ The contents of the repository is organized as follows: The BMRE repository cont
   - CriticalSectionProblem 
   - Lock
 
-- [x] Determining memory bounds with probabilistic analysis is illustrated for Logging_AV case study.
+- [x] Determining memory bounds with probabilistic analysis is illustrated for all the Example scenarios.
 
 - [x] The Version2.zip file contains the implementation of the scenario of logging of steering commands in an Autonomous Vehicle (AV) to show the usefulness and applicability of the bounded-memory enforcer in a real-world context.
   - The file Automata.py  contains all the functionalities related to defining the automaton and operations on the automaton;
@@ -53,7 +54,7 @@ Let us consider two example scenarios in autonomous vehicles for measuring the p
  
 1. Logging in AV: The first example scenario, used to evaluate the performance of our enforcer, contained in the Logging_AV directory, is related to logging of steering commands in Autonomous Vehicle (AV) required for simulations in the lab for future autonomous functions. The path planning steering commands like Move Left, Move Right, Move Forward, and Stop are logged for better testing and validation solutions, each time it is issued. However, due to memory constraints in AV, the data (event) is logged to a remote location. But, logging each event, every time it is issued, to a remote location is difficult. Thus, let’s consider the requirement, “*Logging of path planning steering commands should be done, when the vehicle reaches a Stop state*”, on the remote logging application to manage the overhead. Below figure presents the automaton of the proposed property. 
   <p align="center">
-    <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/Logging_AV.png" width="250" height="250">
+    <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/Logging_AV2.png" width="250" height="250">
   </p>
   Location Start is the initial and Stop is the only accepting location, which when reached, starts the logging of steering commands. Thus, the enforcer for the above property must buffer the steering commands into a buffer without logging it to a remote location, until Stop command is issued. Once it issues a Stop command, it can “flush” its buffer to a remote location. This property can be successfully enforced with our bounded enforcer because for an incoming event which needs to be buffered and we don't have a room in the memory to buffer it, then the events making a (minimal) cycle in the property automaton can be discarded as the previous event received just before that event is same as the event making a cycle, hence will not make much difference to the logging job. 
 
@@ -84,7 +85,7 @@ Let us consider two example scenarios related to concurrency for measuring the p
 1. Critical Section Problem: The third example scenario, used to evaluate the performance of our enforcer, contained in the CriticalSectionProblem directory is related to critical section problem in operating systems. In concurrent programming, concurrent accesses to shared resources can lead to unexpected or erroneous behavior, so parts of the program where the shared resource is accessed ( i.e., critical section) need to be protected in ways that avoid concurrent access. It cannot be executed by more than one process at a time. So, one can write a simple property as, “*If a process wishes to enter the critical section, it must first execute the try section and wait until it acquires access to the critical section. After the process has executed its critical section and is finished with the shared resources, it can release them for other processes’ use.*”  Below figure presents the automaton of the proposed property. 
 
 <p align="center">
-  <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/CriticalSectionProblem.png" width="250" height="250">
+  <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/CriticalSectionProblem1.png" width="250" height="250">
 </p> 
 For the above property, every process’s program can be partitioned into five sections, resulting in five states. Program execution cycles through these four states in the order specified in the property. So, when a process wants to execute the critical section and issues these operation requests, it executes in those operation request sections, with every request IDs being buffered into the memory of the enforcer (and resources still kept acquired). Once the property is satisfied, (terminating with a done message; issue of done message indicates the consent of releasing of resources and the changes reflected to all) everything from buffer is flushed out (making it ready for new set of requests) and the resources are released for other processes’ use. 
 
@@ -96,7 +97,7 @@ The performance summary of this example scenario is included in the CriticalSect
 
 2. Lock: The fourth example scenario, used to evaluate the performance of our enforcer, contained in the Lock directory is related to concurrency control in transactions. Concurrency control techniques are used to ensure that the Isolation property of concurrently executing transactions is maintained. There are different concurrency control protocols e.g. lock based protocol. A lock is a variable associated with a data item that describes a status of data item with respect to possible operation that can be applied to it. They synchronize the access by concurrent transactions to the database items. Let us consider a specific requirement on the database system, “*For database items {A, B}, any transaction accessing both A and B must access A before accessing B.*” Below figure presents the automaton of the proposed property. 
 <p align="center">
-  <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/Lock.png" width="250" height="250">
+  <img src="https://github.com/saumyashankarsinha/BMRE/blob/main/Images/Lock2.png" width="250" height="250">
 </p> 
 So, lock on data items {A, B} is acquired by a transaction when the events arrive in a proper order, until then data items are not locked and every request is buffered. When requests comes which results in satisfaction of the above concurrency property then lock is acquired on the data items, and the buffer is flushed for new set of requests. This property can be successfully enforced with our bounded enforcer because when a data event is locked then locking it again makes no difference. Thus, when the requests are buffered and the buffer is full, then for an incoming event ready to be buffered, the idempotent events (the events engaged in cycle) can be suppressed.
 
